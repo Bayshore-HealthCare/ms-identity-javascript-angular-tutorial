@@ -64,7 +64,7 @@
  */
 export const protectedResources = {
   todoListApi: {
-    endpoint: "https://localhost:44351/api/todolist",
+    endpoint: "http://localhost:5000/api/todolist",
     scopes: ["https://bayshoredigitalb2cpoc.onmicrosoft.com/651079f8-71d7-4324-81c9-f9e062ea7572/access_as_user"],
   },
 }
