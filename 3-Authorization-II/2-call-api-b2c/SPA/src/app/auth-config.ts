@@ -17,18 +17,18 @@
   */
  export const b2cPolicies = {
      names: {
-         signUpSignIn: "b2c_1_susi_reset_v2",
-         editProfile: "b2c_1_edit_profile_v2"
+         signUpSignIn: "B2C_1_signupsignin",
+         editProfile: "B2C_1_profiledit"
      },
      authorities: {
          signUpSignIn: {
-             authority: "https://fabrikamb2c.b2clogin.com/fabrikamb2c.onmicrosoft.com/b2c_1_susi_reset_v2",
+             authority: "https://bayshoredigitalb2cpoc.b2clogin.com/bayshoredigitalb2cpoc.onmicrosoft.com/B2C_1_signupsignin",
          },
          editProfile: {
-             authority: "https://fabrikamb2c.b2clogin.com/fabrikamb2c.onmicrosoft.com/b2c_1_edit_profile_v2"
+             authority: "https://bayshoredigitalb2cpoc.b2clogin.com/bayshoredigitalb2cpoc.onmicrosoft.com/B2C_1_profiledit"
          }
      },
-     authorityDomain: "fabrikamb2c.b2clogin.com"
+     authorityDomain: "bayshoredigitalb2cpoc.b2clogin.com"
  };
  
  /**
@@ -38,7 +38,7 @@
   */
   export const msalConfig: Configuration = {
      auth: {
-         clientId: '9067c884-9fa6-414f-9aa4-a565b1cb46be', // This is the ONLY mandatory field that you need to supply.
+         clientId: 'd019b5a4-1404-47f0-9bc6-0a0f98d33372', // This is the ONLY mandatory field that you need to supply.
          authority: b2cPolicies.authorities.signUpSignIn.authority, // Defaults to "https://login.microsoftonline.com/common"
          knownAuthorities: [b2cPolicies.authorityDomain], // Mark your B2C tenant's domain as trusted.
          redirectUri: '/', // Points to window.location.origin. You must register this URI on Azure portal/App Registration.
@@ -65,7 +65,7 @@
 export const protectedResources = {
   todoListApi: {
     endpoint: "https://localhost:44351/api/todolist",
-    scopes: ["https://fabrikamb2c.onmicrosoft.com/helloapi/demo.read"],
+    scopes: ["https://bayshoredigitalb2cpoc.onmicrosoft.com/651079f8-71d7-4324-81c9-f9e062ea7572/access_as_user"],
   },
 }
 
