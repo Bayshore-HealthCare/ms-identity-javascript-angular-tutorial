@@ -16,8 +16,8 @@ const isIE = window.navigator.userAgent.indexOf("MSIE ") > -1 || window.navigato
  */
 export const msalConfig: Configuration = {
     auth: {
-        clientId: 'Enter_the_Application_Id_Here', // This is the ONLY mandatory field that you need to supply.
-        authority: 'https://login.microsoftonline.com/Enter_the_Tenant_Info_Here', // Defaults to "https://login.microsoftonline.com/common"
+        clientId: '6aeaa141-718d-42df-86e3-d56ef682841c', // This is the ONLY mandatory field that you need to supply.
+        authority: 'https://login.microsoftonline.com/b3cbe65b-2f59-494f-a24b-571b825d92d2', // Defaults to "https://login.microsoftonline.com/common"
         redirectUri: '/', // Points to window.location.origin by default. You must register this URI on Azure portal/App Registration.
         postLogoutRedirectUri: '/', // Points to window.location.origin by default.
         clientCapabilities: ['CP1'] // This lets the resource server know that this client can handle claim challenges.
@@ -49,8 +49,8 @@ export const protectedResources = {
     apiTodoList: {
         endpoint: "https://localhost:44351/api/todolist",
         scopes: {
-            read: ["api://Enter_the_Web_Api_Application_Id_Here/TodoList.Read"],
-            write: ["api://Enter_the_Web_Api_Application_Id_Here/TodoList.ReadWrite"]
+            read: ["api://f9a00edc-1dff-4bc5-ab9a-92a3087166aa/TodoList.Read"],
+            write: ["api://f9a00edc-1dff-4bc5-ab9a-92a3087166aa/TodoList.ReadWrite"]
         }
     }
 }
